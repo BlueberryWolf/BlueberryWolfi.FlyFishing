@@ -85,12 +85,12 @@ func _toggle_flight():
 	
 	if flying:
 		print("flying start")
-		player.animation_data["sprinting"] = true
+		player.animation_data["moving"] = 2
 		player.freecamming = true
 		PlayerData._send_notification("Now flying", 0)
 	else:
 		print("flying stop")
-		player.animation_data["sprinting"] = false
+		player.animation_data["moving"] = 0
 		player.freecamming = false
 		PlayerData._send_notification("No longer flying", 1)
 		player.rotation = player.cam_base.rotation
